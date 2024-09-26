@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_URI'] == '/') {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/">Главная</a>
+              <a class="nav-link" aria-current="page" href="/">Главная</a>
             </li>
             <!-- <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_URI'] == '/') {
             <!-- <li class="nav-item dropdown"> -->
               <!-- <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> -->
               <!-- <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> -->
-              <a class="nav-link" href="/manufacturers">
+              <a class="nav-link" href="/manufacturers/">
                 Производители
               </a>
               <ul class="dropdown-menu">
@@ -70,16 +70,16 @@ if ($_SERVER['REQUEST_URI'] == '/') {
             </li>
 
             <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="/articles">Статьи о полимерах</a>
+              <a class="nav-link " aria-current="page" href="/articles/">Статьи о полимерах</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="/certificates">Сертификаты</a>
+              <a class="nav-link " aria-current="page" href="/certificates/">Сертификаты</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="/delivery">Доставка</a>
+              <a class="nav-link " aria-current="page" href="/delivery/">Доставка</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="/contacts">Контакты</a>
+              <a class="nav-link " aria-current="page" href="/contacts/">Контакты</a>
             </li>
           </ul>
           <div class="d-flex" style="gap: 10px">
