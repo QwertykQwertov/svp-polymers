@@ -1,3 +1,13 @@
+<?
+$title = 'Статьи';
+$description = 'Продажа и резка полимерных материалов';
+$keywords = 'ПВХ сэндвич-панели, оргстекло литое, оргстекло экструзионное, ПВХ лист, клеи и очистители, поликарбонат сотовый, резка полимеров, теплицы ';
+$page = 'articles';
+
+include_once $_SERVER['DOCUMENT_ROOT'] . "/modules/header.php";
+include_once $_SERVER['DOCUMENT_ROOT'] . "/articles/articles_info.php";
+?>
+
 <div class="container mt-5 mb-5">
   <h3 class="mb-5">Обработка жесткого ПВХ</h3>
 
@@ -149,3 +159,5 @@
   </div>
 
 </div>
+
+<? include_once $_SERVER['DOCUMENT_ROOT'] . "/modules/footer.php"; ?>

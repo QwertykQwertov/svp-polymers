@@ -1,3 +1,9 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 .delivery-list>li {
   padding: 10px;
 }
@@ -8,7 +14,7 @@
   background: url(/assets/images/man.jpg) no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
 }
 
 .welcome-overlay {
@@ -26,4 +32,85 @@
 .ki-card:hover {
   scale: 1.01;
   box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+
+/* slider */
+@media (max-width: 767px) {
+  .carousel-inner .carousel-item>div {
+    display: none;
+  }
+
+  .carousel-inner .carousel-item>div:first-child {
+    display: block;
+  }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+  /* justify-content: center; */
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+
+  .carousel-inner .carousel-item-end.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(25%);
+  }
+
+  .carousel-inner .carousel-item-start.active,
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-25%);
+  }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start {
+  transform: translateX(0);
+}
+
+/* End slider */
+
+
+/* contacts page */
+.contacts-wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.map {
+  flex: 2;
+  min-width: 230px;
+}
+
+.contacts-card {
+  flex: 1;
+  min-width: 230px;
+}
+
+.contacts-list {
+  list-style: none;
+}
+
+.contacts-list>li {
+  margin: 10px 0;
+}
+
+.contacts-list>li>a {
+  text-decoration: none;
+  color: var(--bs-body-color);
+}
+
+.contacts-list>li>a:hover {
+  /* text-shadow: 0.5px -0.5px black; */
+  text-shadow: 0 0 black;
+}
+
+.contacts-list>li>a:hover>svg {
+  transform: rotate(15deg);
 }

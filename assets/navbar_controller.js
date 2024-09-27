@@ -4,6 +4,4 @@ window.addEventListener('load', () => {
   
   const selectedMenuItem = navbarSupportedContent.querySelector(`[href="${location}"]`)
   selectedMenuItem.classList.add('active')
-  console.log('[log]', window.location.pathname)
-  console.log('[log]', selectedMenuItem)
 })

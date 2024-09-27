@@ -2,33 +2,26 @@
 $title = 'Производители';
 $description = 'Продажа и резка полимерных материалов';
 $keywords = 'ПВХ сэндвич-панели, оргстекло литое, оргстекло экструзионное, ПВХ лист, клеи и очистители, поликарбонат сотовый, резка полимеров, теплицы ';
+$page = 'manufacturers';
 
 include_once $_SERVER['DOCUMENT_ROOT'] . "/modules/header.php";
 include_once $_SERVER['DOCUMENT_ROOT'] . "/manufacturers/manufacturers_info.php";
-$manufacturer = $_GET['manufacturer']
 ?>
-<? if ($manufacturer == 'man1') {
-  include_once $_SERVER['DOCUMENT_ROOT'] . "/manufacturers/man1.php";
-} elseif ($manufacturer == 'man2') {
-  include_once $_SERVER['DOCUMENT_ROOT'] . "/manufacturers/man2.php";
-} else {
-?>
-  <div class="container mt-5 mb-5">
-    <div class="row row-cols-1 row-cols-md-4 g-4">
-      <?php foreach ($manufacturers as $manufacturer): ?>
-        <div class="col">
-          <a href="/manufacturers/?manufactures=<?= $manufacturer['href']; ?>" class="card h-100 ki-card">
-            <div style="padding:10px;">
-              <img src=<?= $manufacturer['src'] ?> class="card-img-top" alt=<?= $manufacturer['name'] ?>>
-            </div>
-            <div class="card-body text-center">
-              <h5 class="card-title"><?= $manufacturer['name'] ?></h5>
-              <p class="card-text"><?= $manufacturer['dsc'] ?></p>
-            </div>
-          </a>
-        </div>
-      <?php endforeach; ?>
-    </div>
+<div class="container mt-5 mb-5">
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+    <?php foreach ($manufacturers as $manufacturer): ?>
+      <div class="col">
+        <a href="/manufacturers/<?= $manufacturer['href']; ?>" class="card h-100 ki-card">
+          <div style="padding:10px;">
+            <img src=<?= $manufacturer['src'] ?> class="card-img-top" alt=<?= $manufacturer['name'] ?>>
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title"><?= $manufacturer['name'] ?></h5>
+            <p class="card-text"><?= $manufacturer['dsc'] ?></p>
+          </div>
+        </a>
+      </div>
+    <?php endforeach; ?>
   </div>
-<? } ?>
+</div>
 <? include_once $_SERVER['DOCUMENT_ROOT'] . "/modules/footer.php"; ?>
