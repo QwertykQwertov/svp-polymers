@@ -1,3 +1,39 @@
+<footer class=" mt-5 border-top bg-dark text-light">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5">
+      <div class="col mb-3">
+        <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none text-light">
+          <h5>ООО "СВП"</h5>
+        </a>
+        <p class="text-light">© 2024</p>
+      </div>
+
+      <div class="col mb-3"></div>
+      <div class="col mb-3"></div>
+      <div class="col mb-3">
+        <h5>Контакты</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">г. Лыткарино, квартал 2-й, 15</a></li>
+          <li class="nav-item mb-2"><a href="tel:+79017959902" class="nav-link p-0 text-light">+7 (901) 795-99-02</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">zva@sv-polymers.ru</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Время работы:
+              пн-пт 9.00-18.00, без перерыва
+              сб, вс Выходной</a></li>
+        </ul>
+      </div>
+
+      <div class="col mb-3">
+        <h5>Покупателям</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="/catalog/" class="nav-link p-0 text-light">Товары и услуги</a></li>
+        </ul>
+      </div>
+
+
+    </div>
+  </div>
+</footer>
+
 <script src="/assets/bootstrap/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 <!-- <script src="/assets/navbar_controller.js"></script> -->
 </body>

@@ -24,7 +24,7 @@ if (!isset($page)) {
 <body>
   <header>
     <nav class="navbar sticky-top navbar-expand-lg bg-dark" data-bs-theme="dark">
-      <div class="container-fluid container">
+      <div class="container-fluid">
         <a class="navbar-brand" href="/">ООО "СВП"</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
