@@ -7,6 +7,9 @@
 
   $slider_json_data = file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/assets/slider.json");
   $slider_data = json_decode($slider_json_data, true);
+
+  $catalog_json_data = file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/catalog/catalog.json");
+  $catalog_data = json_decode($catalog_json_data, true);
   ?>
   <div class="welcome-section">
     <div class="welcome-overlay"></div>
@@ -83,7 +86,7 @@
     <div class="container">
       <!-- <hr class="ki-custom-hr"> -->
       <div class='d-flex gap-5 my-5'>
-        <div class="about-image-wrapper" >
+        <div class="about-image-wrapper">
           <img src="/assets/images/about_test.jpg" alt="" style="border-radius: 5px;">
         </div>
         <div class="about-text-wrapper">
@@ -102,6 +105,28 @@
   </section>
 
   <!-- End О компании -->
+
+  <!-- Товары и услуги -->
+  <div class="container my-5">
+    <h2>Товары и услуги</h2>
+    <div class="container mt-5 mb-5">
+      <div class="row row-cols-1 row-cols-md-4 g-4">
+        <?php foreach ($catalog_data as $product):?>
+          <div class="col">
+            <a href="/catalog/<?= $product['href']; ?>" class="card h-100 ki-card">
+              <div style="padding:10px;">
+                <img style="width: 100%; height: 300px;" src=<?= '/assets/images/catalog/' . $product['mainImg'] ?> class="card-img-top" alt=<?= $product['name'] ?>>
+              </div>
+              <div class="card-body text-center">
+                <h5 class="card-title"><?= $product['name'] ?></h5>
+              </div>
+            </a>
+          </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </div>
+  <!-- End товары и услуги -->
 
   <!-- Slider -->
   <div class="container my-5" style="flex:1;">
