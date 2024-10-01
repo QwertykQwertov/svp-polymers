@@ -109,23 +109,34 @@
   <!-- Товары и услуги -->
   <div class="container my-5">
     <h2>Товары и услуги</h2>
-    <div class="container mt-5 mb-5">
-      <div class="row row-cols-1 row-cols-md-4 g-4">
-        <?php foreach ($catalog_data as $product):?>
+    <div class="row row-cols-1 row-cols-md-4 g-4 mt-4">
+      <?php
+      require($_SERVER['DOCUMENT_ROOT'] . '/database/db.php');
+
+      print_r($conn);
+
+      $sql = 'SELECT * FROM categories';
+      $result = $conn->query($sql);
+
+      if ($result->num_rows != 0) {
+
+        $categories = $result->fetch_all(MYSQLI_ASSOC);
+
+        foreach ($categories as $category): ?>
           <div class="col">
-            <a href="/catalog/<?= $product['href']; ?>" class="card h-100 ki-card">
+            <a href="/catalog/<?= $category['category_link']; ?>" class="card h-100 ki-card">
               <div style="padding:10px;">
-                <img style="width: 100%; height: 300px;" src=<?= '/assets/images/catalog/' . $product['mainImg'] ?> class="card-img-top" alt=<?= $product['name'] ?>>
+                <img style="width: 100%; height: 300px;" src=<?= '/assets/images/categories/' . $category['image'] ?> class="card-img-top" alt=<?= $$category['name'] ?>>
               </div>
               <div class="card-body text-center">
-                <h5 class="card-title"><?= $product['name'] ?></h5>
+                <h5 class="card-title"><?= $category['name'] ?></h5>
               </div>
             </a>
           </div>
         <?php endforeach; ?>
-      </div>
     </div>
   </div>
+  <?php } ?>
   <!-- End товары и услуги -->
 
   <!-- Slider -->

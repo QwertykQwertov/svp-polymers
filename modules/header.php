@@ -43,16 +43,15 @@ if (!isset($page)) {
                 Каталог
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">ПВХ листовой жесткий</a></li>
-                <li><a class="dropdown-item" href="#">ПВХ листовой вспененный</a></li>
-                <li><a class="dropdown-item" href="#">ПВХ листовой прозрачный жесткий</a></li>
-                <li><a class="dropdown-item" href="#">ПВХ сэндвич-панели</a></li>
-                <li><a class="dropdown-item" href="#">Оргстекло литое</a></li>
+                <li><a class="dropdown-item" href="/catalog/pvc_rod/">ПВХ пруток</a></li>
+                <li><a class="dropdown-item" href="#">Пластик ПВХ</a></li>
+                <li><a class="dropdown-item" href="#">Сэндвич-панели</a></li>
+                <!-- <li><a class="dropdown-item" href="#">Оргстекло литое</a></li>
                 <li><a class="dropdown-item" href="#">Оргстекло экструзионное</a></li>
                 <li><a class="dropdown-item" href="#">Поликарбонат литой</a></li>
                 <li><a class="dropdown-item" href="#">Поликарбонат сотовый</a></li>
                 <li><a class="dropdown-item" href="#">Теплицы</a></li>
-                <li><a class="dropdown-item" href="#">Резка листовых полимеров</a></li>
+                <li><a class="dropdown-item" href="#">Резка листовых полимеров</a></li> -->
               </ul>
             </li>
             <li class="nav-item">
