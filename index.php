@@ -113,8 +113,6 @@
       <?php
       require($_SERVER['DOCUMENT_ROOT'] . '/database/db.php');
 
-      print_r($conn);
-
       $sql = 'SELECT * FROM categories';
       $result = $conn->query($sql);
 

@@ -11,7 +11,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/articles/articles_info.php";
 <div class="container mt-5 mb-5">
   <h3 class="mb-5">Обработка жесткого ПВХ</h3>
 
-  <div class="card mb-3 text-bg-light">
+  <div class="card mb-3">
     <div class="row g-0">
       <div class="col-md-4">
         <img src="/assets/images/articles/zhest_pvh.jpg" class="img-fluid rounded-start" alt="Жесткий ПВХ" style="height: 100%; width: 100%;">
@@ -30,7 +30,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/articles/articles_info.php";
     </div>
   </div>
 
-  <!-- <div class="card text-bg-light mb-3">
+  <!-- <div class="card mb-3">
     <div class="card-header">Пиление жесткого ПВХ</div>
     <div class="card-body">
       <p class="card-text">Для жесткого ПВХ используют ручные, дисковые и ленточные пилы, а также лобзик. Хорошо подходят ручные пилы, предназначенные для работы по дереву. Пилы, предназначенные для работы по металлу, могут забиваться из-за мелкого шага зубьев. Оптимальным будет пиление со скоростью до 300 об/мин и с подачей материала порядка 30 м/мин. Рекомендуемые значения:</p>
@@ -42,8 +42,10 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/articles/articles_info.php";
     </div>
   </div> -->
 
-  <div class="card text-bg-light mb-3">
-    <div class="card-header">Сверление жесткого ПВХ</div>
+  <div class="card mb-3">
+    <div class="card-header">
+      <h5>Сверление жесткого ПВХ</h5>
+    </div>
     <div class="card-body">
       <!-- <h5 class="card-title">Light Заголовок карточки</h5> -->
       <p class="card-text">Для сверления листов жесткого ПВХ подходят стандартные дрели, предназначенные для работ по металлу. Оптимальной будет работа при скорости вращения 50–300 об/мин и подаче в 3,5–6 м/мин.
@@ -57,8 +59,10 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/articles/articles_info.php";
     </div>
   </div>
 
-  <div class="card text-bg-light mb-3">
-    <div class="card-header">Фрезерование жесткого ПВХ</div>
+  <div class="card mb-3">
+    <div class="card-header">
+      <h5>Фрезерование жесткого ПВХ</h5>
+    </div>
     <div class="card-body">
       <!-- <h5 class="card-title">Light Заголовок карточки</h5> -->
       <p class="card-text">Фрезеровать жесткий поливинилхлорид можно на стандартных универсальных станках, вертикальных и горизонтальных станках. Для исключения повреждений поверхности листы следует фиксировать пластиковыми или деревянными прокладками.
@@ -73,8 +77,10 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/articles/articles_info.php";
     </div>
   </div>
 
-  <div class="card text-bg-light mb-3">
-    <div class="card-header">Горячая гибка жесткого ПВХ</div>
+  <div class="card mb-3">
+    <div class="card-header">
+      <h5>Горячая гибка жесткого ПВХ</h5>
+    </div>
     <div class="card-body">
       <!-- <h5 class="card-title">Light Заголовок карточки</h5> -->
       <p class="card-text">Изогнуть листы ПВХ можно с помощью любого стандартного оборудования для сгибания термопластиков. Достаточно часто применяется оборудование собственного изготовления. Важным условием аккуратного изгибания является равномерная температура по всей зоне постоянного нагревания. Оптимальным будет ее диапазон от 115 до 130 °С. Радиус кривизны при сгибании должен быть равен не менее чем 1,5–2 толщины листа.
@@ -83,8 +89,10 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/articles/articles_info.php";
     </div>
   </div>
 
-  <div class="card text-bg-light mb-3">
-    <div class="card-header">Холодная гибка жесткого ПВХ</div>
+  <div class="card mb-3">
+    <div class="card-header">
+      <h5>Холодная гибка жесткого ПВХ</h5>
+    </div>
     <div class="card-body">
       <!-- <h5 class="card-title">Light Заголовок карточки</h5> -->
       <p class="card-text">Тонкий пластик – до 1 мм – можно сгибать до 90° с помощью листогиба, предварительно не нагревая лист.
@@ -92,8 +100,10 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/articles/articles_info.php";
     </div>
   </div>
 
-  <div class="card text-bg-light mb-3">
-    <div class="card-header">Склеивание жесткого ПВХ</div>
+  <div class="card mb-3">
+    <div class="card-header">
+      <h5>Склеивание жесткого ПВХ</h5>
+    </div>
     <div class="card-body">
       <!-- <h5 class="card-title">Light Заголовок карточки</h5> -->
       <p class="card-text">Склеивать между собой листы жесткого ПВХ лучше всего с помощью растворяющего клея (холодной сварки Cosmofen Plus). Также используют и реактивный или секундный клей (Cosmofen CA 12).
@@ -102,8 +112,10 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/articles/articles_info.php";
     </div>
   </div>
 
-  <div class="card text-bg-light mb-3">
-    <div class="card-header">Сварка жесткого ПВХ</div>
+  <div class="card mb-3">
+    <div class="card-header">
+      <h5>Сварка жесткого ПВХ</h5>
+    </div>
     <div class="card-body">
       <!-- <h5 class="card-title">Light Заголовок карточки</h5> -->
       <p class="card-text">Сварка жесткого поливинилхлорида струей горячего воздуха ведется с соблюдением стандартных критериев для термопластиков. Основными из них являются подготовка сварного шва и соблюдение температурного режима при сварке.
@@ -117,8 +129,10 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/articles/articles_info.php";
     </div>
   </div>
 
-  <div class="card text-bg-light mb-3">
-    <div class="card-header">Термоформовка жесткого ПВХ</div>
+  <div class="card mb-3">
+    <div class="card-header">
+      <h5>Термоформовка жесткого ПВХ</h5>
+    </div>
     <div class="card-body">
       <!-- <h5 class="card-title">Light Заголовок карточки</h5> -->
       <p class="card-text">Придавать необходимую форму жесткому ПВХ можно путем нагревания и последующей вакуумной формовки. В процессе формования надо избегать острых краев и углов, радиус сгиба должен быть равен двукратной толщине листа и более. Рекомендованный угол наклона боковых стен составляет от 5 до 8° и зависит от пропорций изделия – чем он больше, тем лучше отношение высоты изделия h к диаметру или минимальной ширине d.
@@ -127,8 +141,10 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/articles/articles_info.php";
     </div>
   </div>
 
-  <div class="card text-bg-light mb-3">
-    <div class="card-header">Окраска жесткого ПВХ</div>
+  <div class="card mb-3">
+    <div class="card-header">
+      <h5>Окраска жесткого ПВХ</h5>
+    </div>
     <div class="card-body">
       <!-- <h5 class="card-title">Light Заголовок карточки</h5> -->
       <p class="card-text">Для окрашивания жесткого поливинилхлорида лучше всего подходят акриловые, двухкомпонентные полиуретановые и ПВХ-краски.
@@ -139,8 +155,10 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/articles/articles_info.php";
     </div>
   </div>
 
-  <div class="card text-bg-light mb-3">
-    <div class="card-header">Трафаретная печать на жестком ПВХ</div>
+  <div class="card mb-3">
+    <div class="card-header">
+      <h5>Трафаретная печать на жестком ПВХ</h5>
+    </div>
     <div class="card-body">
       <!-- <h5 class="card-title">Light Заголовок карточки</h5> -->
       <p class="card-text">На листы жесткого ПВХ легко наносить печать методом шелкографии обычными красками для твердого поливинилхлорида. Примеры таких красок: производитель Marabuwerke — Maraplast D; Maragloss GO + GN, MaraspeedSL, Maraprint SP, Marastar SR, Marasoft MS, Libragloss LIG; Sericol GmbH- XG-043 MJ-168 PY-284 MV-205.
@@ -148,8 +166,10 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/articles/articles_info.php";
     </div>
   </div>
 
-  <div class="card text-bg-light mb-3">
-    <div class="card-header">Установка жесткого ПВХ</div>
+  <div class="card mb-3">
+    <div class="card-header">
+      <h5>Установка жесткого ПВХ</h5>
+    </div>
     <div class="card-body">
       <!-- <h5 class="card-title">Light Заголовок карточки</h5> -->
       <p class="card-text">При установке жесткого ПВХ необходимо учитывать коэффициент его расширения. Для этого требуется делать овальные отверстия на случай возможной деформации листов при значительных размерах вывески или перепадах температур.

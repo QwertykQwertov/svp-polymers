@@ -126,3 +126,19 @@ body {
 .contacts-list>li>a:hover>svg {
   transform: rotate(15deg);
 }
+
+
+
+/* Позиционирование подменю сбоку */
+.dropdown-submenu .dropdown-menu {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-top: -1px;
+}
+
+/* Стилизация состояний наведения и фокуса */
+.dropdown-submenu:hover>.dropdown-menu,
+.dropdown-submenu:focus>.dropdown-menu {
+  display: block;
+}

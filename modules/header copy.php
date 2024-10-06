@@ -18,7 +18,6 @@ if (!isset($page)) {
   <meta name="keywords" content="<?= $keywords ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap-navbar-dropdown.css" crossorigin="anonymous">
   <link rel="stylesheet" href="/assets/style.css" crossorigin="anonymous">
 </head>
 
@@ -35,52 +34,11 @@ if (!isset($page)) {
             <li class="nav-item ">
               <a class="nav-link <? if ($page === '/') echo 'active' ?>" aria-current="page" href="/">Главная</a>
             </li>
-
-            <!--  -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdown1" data-flip="false"
-                data-toggle="dropdown" aria-expanded="false">Каталог</a>
-              <ul class="dropdown-menu" aria-labelledby="dropdown1">
-                <li class="dropdown">
-                  <a class="dropdown-item dropdown-toggle" href="#">ПВХ</a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Вспененный</a></li>
-                    <li><a class="dropdown-item" href="#">Жесткий</a></li>
-                    <li><a class="dropdown-item" href="#">Светоблокирующий</a></li>
-                    <li><a class="dropdown-item" href="#">Трудногорючий</a></li>
-                  </ul>
-                </li>
-                <li><a class="dropdown-item" href="#">Сэндвич</a></li>
-                <li class="dropdown">
-                  <a class="dropdown-item dropdown-toggle" href="#">ПП</a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Блоксополимер</a></li>
-                    <li><a class="dropdown-item" href="#">Гомополимер</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown">
-                  <a class="dropdown-item dropdown-toggle" href="#">ПНД</a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">ПНД</a></li>
-                    <li><a class="dropdown-item" href="#">ПНД для хоккейных коробок</a></li>
-                  </ul>
-                </li>
-                <li><a class="dropdown-item" href="#">Монолитный поликарбонат</a></li>
-                <li><a class="dropdown-item" href="#">ПЭТ</a></li>
-                <li class="dropdown">
-                  <a class="dropdown-item dropdown-toggle" href="#">Полистирол</a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">УПС</a></li>
-                    <li><a class="dropdown-item" href="#">ПС</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
             <!-- <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
         </li> -->
 
-            <!-- <li class="nav-item dropdown">
+            <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle <? if ($page === 'catalog') echo 'active' ?>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Каталог
               </a>
@@ -88,15 +46,21 @@ if (!isset($page)) {
                 <li><a class="dropdown-item" href="/catalog/pvc_rod/">ПВХ пруток</a></li>
                 <li><a class="dropdown-item" href="#">Пластик ПВХ</a></li>
                 <li><a class="dropdown-item" href="#">Сэндвич-панели</a></li>
+                <!-- <li><a class="dropdown-item" href="#">Оргстекло литое</a></li>
+                <li><a class="dropdown-item" href="#">Оргстекло экструзионное</a></li>
+                <li><a class="dropdown-item" href="#">Поликарбонат литой</a></li>
+                <li><a class="dropdown-item" href="#">Поликарбонат сотовый</a></li>
+                <li><a class="dropdown-item" href="#">Теплицы</a></li>
+                <li><a class="dropdown-item" href="#">Резка листовых полимеров</a></li> -->
               </ul>
-            </li> -->
+            </li>
             <li class="nav-item">
               <!-- <li class="nav-item dropdown"> -->
               <!-- <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> -->
               <!-- <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> -->
-              <!-- <a class="nav-link <? if ($page === 'manufacturers') echo 'active' ?>" href="/manufacturers/">
+              <a class="nav-link <? if ($page === 'manufacturers') echo 'active' ?>" href="/manufacturers/">
                 Производители
-              </a> -->
+              </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Ялукс Групп</a></li>
                 <li><a class="dropdown-item" href="#">PALRAM</a></li>
