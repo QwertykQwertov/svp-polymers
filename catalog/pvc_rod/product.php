@@ -49,6 +49,16 @@ if ($result->num_rows != 0) {
         </div>
       </div>
     </div>
+
+    <div class="card my-5">
+      <div class="row g-0">
+        <div class="card-body">
+          <h5>Сварка пластика включает в себя несколько этапов</h5>
+          <p class="card-text"><?= $product['instruction'] ?></p>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 
