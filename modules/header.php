@@ -42,54 +42,40 @@ if (!isset($page)) {
                 data-toggle="dropdown" aria-expanded="false">Каталог</a>
               <ul class="dropdown-menu" aria-labelledby="dropdown1">
                 <li class="dropdown">
-                  <a class="dropdown-item dropdown-toggle" href="#">ПВХ</a>
+                  <a class="dropdown-item dropdown-toggle" href="/catalog/pvc_plastic/">ПВХ</a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Вспененный</a></li>
-                    <li><a class="dropdown-item" href="#">Жесткий</a></li>
-                    <li><a class="dropdown-item" href="#">Светоблокирующий</a></li>
-                    <li><a class="dropdown-item" href="#">Трудногорючий</a></li>
+                    <li><a class="dropdown-item" href="/catalog/pvc_plastic/products?sub=3">Вспененный</a></li>
+                    <li><a class="dropdown-item" href="/catalog/pvc_plastic/products?sub=4">Жесткий</a></li>
+                    <li><a class="dropdown-item" href="/catalog/pvc_plastic/products?sub=5">Светоблокирующий</a></li>
+                    <li><a class="dropdown-item" href="/catalog/pvc_plastic/products?sub=6">Трудногорючий</a></li>
                   </ul>
                 </li>
-                <li><a class="dropdown-item" href="#">Сэндвич</a></li>
+                <li><a class="dropdown-item" href="/catalog/sandwich">Сэндвич</a></li>
                 <li class="dropdown">
-                  <a class="dropdown-item dropdown-toggle" href="#">ПП</a>
+                  <a class="dropdown-item dropdown-toggle" href="/catalog/pp">ПП</a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Блоксополимер</a></li>
-                    <li><a class="dropdown-item" href="#">Гомополимер</a></li>
+                    <li><a class="dropdown-item" href="/catalog/pp/products?sub=7">Блоксополимер</a></li>
+                    <li><a class="dropdown-item" href="/catalog/pp/products?sub=8">Гомополимер</a></li>
                   </ul>
                 </li>
                 <li class="dropdown">
-                  <a class="dropdown-item dropdown-toggle" href="#">ПНД</a>
+                  <a class="dropdown-item dropdown-toggle" href="/catalog/pnd">ПНД</a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">ПНД</a></li>
-                    <li><a class="dropdown-item" href="#">ПНД для хоккейных коробок</a></li>
+                    <li><a class="dropdown-item" href="/catalog/pnd/products?sub=9">ПНД</a></li>
+                    <li><a class="dropdown-item" href="/catalog/pnd/products?sub=10">ПНД для хоккейных коробок</a></li>
                   </ul>
                 </li>
-                <li><a class="dropdown-item" href="#">Монолитный поликарбонат</a></li>
-                <li><a class="dropdown-item" href="#">ПЭТ</a></li>
+                <li><a class="dropdown-item" href="/catalog/monolithic_polycarbonate">Монолитный поликарбонат</a></li>
+                <li><a class="dropdown-item" href="/catalog/pat">ПЭТ</a></li>
                 <li class="dropdown">
-                  <a class="dropdown-item dropdown-toggle" href="#">Полистирол</a>
+                  <a class="dropdown-item dropdown-toggle" href="/catalog/polystyrene">Полистирол</a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">УПС</a></li>
-                    <li><a class="dropdown-item" href="#">ПС</a></li>
+                    <li><a class="dropdown-item" href="/catalog/polystyrene/products?sub=11">УПС</a></li>
+                    <li><a class="dropdown-item" href="/catalog/polystyrene/products?sub=12">ПС</a></li>
                   </ul>
                 </li>
               </ul>
             </li>
-            <!-- <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li> -->
-
-            <!-- <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle <? if ($page === 'catalog') echo 'active' ?>" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Каталог
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/catalog/pvc_rod/">ПВХ пруток</a></li>
-                <li><a class="dropdown-item" href="#">Пластик ПВХ</a></li>
-                <li><a class="dropdown-item" href="#">Сэндвич-панели</a></li>
-              </ul>
-            </li> -->
             <li class="nav-item">
               <!-- <li class="nav-item dropdown"> -->
               <!-- <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> -->
