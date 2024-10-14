@@ -82,12 +82,12 @@
   <!-- End Преимущества -->
 
   <!-- О компании -->
-  <section class="about" style="background-color: #F5F5FB;">
+  <section class="about" >
     <div class="container">
       <!-- <hr class="ki-custom-hr"> -->
-      <div class='d-flex gap-5 my-5'>
+      <div class='about-wrapper d-flex gap-5 my-5 align-items-center'>
         <div class="about-image-wrapper">
-          <img src="/assets/images/about_test.jpg" alt="" style="border-radius: 5px;">
+          <img class="about-image" src="/assets/images/about_test.jpg" alt="Наша команда" >
         </div>
         <div class="about-text-wrapper">
           <h3>О нас</h3>
@@ -138,7 +138,7 @@
   <!-- End товары и услуги -->
 
   <!-- Slider -->
-  <div class="container my-5" style="flex:1;">
+  <!-- <div class="container my-5" style="flex:1;">
     <hr class="ki-custom-hr mb-5">
     <div class="row mx-auto my-auto justify-content-center">
       <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
@@ -148,9 +148,7 @@
           <? } ?>
         </div>
         <div class="carousel-inner" role="listbox">
-          <!-- <div class="carousel-item active">
-        <img src="..." class="d-block w-100" alt="...">
-      </div> -->
+ 
           <? foreach ($slider_data as $key => $item) {
           ?>
             <div class="carousel-item <? if ($key == 0) echo 'active' ?>">
@@ -174,7 +172,7 @@
         </button>
       </div>
     </div>
-  </div>
+  </div> -->
   <!-- End Slider -->
 
   <script>

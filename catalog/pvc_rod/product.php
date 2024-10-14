@@ -11,7 +11,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/database/db.php');
 $id = $_GET['id'];
 
 if ($id) {
-  $sql = "SELECT * FROM products WHERE id = $id";
+  $sql = "SELECT * FROM products_pvc_rod WHERE id = $id";
 } else {
   // 404
 }
@@ -21,6 +21,8 @@ $result = $conn->query($sql);
 if ($result->num_rows != 0) {
 
   $product = $result->fetch_assoc();
+} else {
+  print_r('Error' . $result);
 }
 ?>
 
@@ -53,7 +55,16 @@ if ($result->num_rows != 0) {
     <div class="card my-5">
       <div class="row g-0">
         <div class="card-body">
-          <h5>Сварка пластика включает в себя несколько этапов</h5>
+          <h5>Применение:</h5>
+          <p class="card-text">Сварочный пруток применяется для надежной и качественной сварки пластмассовых материалов.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card my-5">
+      <div class="row g-0">
+        <div class="card-body">
+          <h5>Сварка пластика включает в себя несколько этапов:</h5>
           <p class="card-text"><?= $product['instruction'] ?></p>
         </div>
       </div>

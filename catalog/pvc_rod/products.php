@@ -11,9 +11,9 @@ require($_SERVER['DOCUMENT_ROOT'] . '/database/db.php');
 $subcategory = $_GET['sub'];
 
 if ($subcategory) {
-  $sql = "SELECT * FROM products WHERE subcategory = $subcategory";
+  $sql = "SELECT * FROM products_pvc_rod WHERE subcategory = $subcategory";
 } else {
-  $sql = "SELECT * FROM products WHERE category = 1";
+  $sql = "SELECT * FROM products_pvc_rod";
 }
 
 $result = $conn->query($sql);

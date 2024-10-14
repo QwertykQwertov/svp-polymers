@@ -42,6 +42,13 @@ if (!isset($page)) {
                 data-toggle="dropdown" aria-expanded="false">Каталог</a>
               <ul class="dropdown-menu" aria-labelledby="dropdown1">
                 <li class="dropdown">
+                  <a class="dropdown-item dropdown-toggle" href="/catalog/pvc_rod/">ПВХ пруток</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/catalog/pvc_rod/products?sub=1">Белый</a></li>
+                    <li><a class="dropdown-item" href="/catalog/pvc_rod/products?sub=2">Серый</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
                   <a class="dropdown-item dropdown-toggle" href="/catalog/pvc_plastic/">ПВХ</a>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="/catalog/pvc_plastic/products?sub=3">Вспененный</a></li>

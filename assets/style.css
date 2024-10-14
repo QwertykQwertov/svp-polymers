@@ -142,3 +142,35 @@ body {
 .dropdown-submenu:focus>.dropdown-menu {
   display: block;
 }
+
+.about {
+  background-color: #F5F5FB;
+}
+
+.about-image-wrapper,
+.about-text-wrapper {
+  width: 50%;
+}
+
+.about-image {
+  border-radius: 5px;
+  width: 100%;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .about-wrapper {
+    flex-direction: column;
+  }
+
+  .about-image-wrapper,
+  .about-text-wrapper {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .ki-advantages-card {
+    flex-direction: column;
+  }
+}
