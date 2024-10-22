@@ -47,7 +47,6 @@ if ($result->num_rows != 0) {
             <p class="card-text"><?= 'Упаковка: ' . $product['pack'] ?></p>
             <p class="card-text"><?= 'Толщина, мм: ' . $product['thickness'] ?></p>
             <p class="card-text"><?= 'Формат, мм: ' . $product['length'] . 'x' . $product['width'] ?></p>
-            <p class="card-text"><?= 'Упаковка: ' . $product['pack'] ?></p>
           </div>
         </div>
       </div>

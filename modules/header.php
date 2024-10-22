@@ -42,13 +42,6 @@ if (!isset($page)) {
                 data-toggle="dropdown" aria-expanded="false">Каталог</a>
               <ul class="dropdown-menu" aria-labelledby="dropdown1">
                 <li class="dropdown">
-                  <a class="dropdown-item dropdown-toggle" href="/catalog/pvc_rod/">ПВХ пруток</a>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="/catalog/pvc_rod/products?sub=1">Белый</a></li>
-                    <li><a class="dropdown-item" href="/catalog/pvc_rod/products?sub=2">Серый</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown">
                   <a class="dropdown-item dropdown-toggle" href="/catalog/pvc_plastic/">ПВХ</a>
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="/catalog/pvc_plastic/products?sub=3">Вспененный</a></li>
@@ -81,6 +74,15 @@ if (!isset($page)) {
                     <li><a class="dropdown-item" href="/catalog/polystyrene/products?sub=12">ПС</a></li>
                   </ul>
                 </li>
+                <li><a class="dropdown-item" href="/catalog/abs">ABS пластик</a></li>
+                <li class="dropdown">
+                  <a class="dropdown-item dropdown-toggle" href="/catalog/pvc_rod/">Пруток</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/catalog/pvc_rod/products?sub=1">Белый</a></li>
+                    <li><a class="dropdown-item" href="/catalog/pvc_rod/products?sub=2">Серый</a></li>
+                  </ul>
+                </li>
+                <li><a class="dropdown-item" href="/catalog/cut">Резка пластика</a></li>
               </ul>
             </li>
             <li class="nav-item">
@@ -109,7 +111,7 @@ if (!isset($page)) {
               <a class="nav-link <? if ($page === 'certificates') echo 'active' ?>" aria-current="page" href="/certificates/">Сертификаты</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link <? if ($page === 'delivery') echo 'active' ?>" aria-current="page" href="/delivery/">Доставка</a>
+              <a class="nav-link <? if ($page === 'delivery') echo 'active' ?>" aria-current="page" href="/delivery/">Услуги</a>
             </li>
             <li class="nav-item">
               <a class="nav-link <? if ($page === 'contacts') echo 'active' ?>" aria-current="page" href="/contacts/">Контакты</a>

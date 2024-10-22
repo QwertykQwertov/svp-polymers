@@ -15,10 +15,107 @@
     <div class="welcome-overlay"></div>
   </div>
 
+
+  <!-- О компании -->
+  <section class="about">
+    <div class="container">
+      <!-- <hr class="ki-custom-hr"> -->
+      <div class='about-wrapper d-flex gap-5 my-5 align-items-center'>
+        <div class="about-image-wrapper">
+          <img class="about-image" src="/assets/images/about_test.jpg" alt="Наша команда">
+        </div>
+        <div class="about-text-wrapper">
+          <h3>О нас</h3>
+          <p style="text-align: justify; line-height: 1.8;">ООО "СВП" - надежный партнер в области производства и продажи листового пластика.
+            Мы работаем на рынке уже более 5 лет и за это время зарекомендовали себя как профессионалы своего дела.
+            Наша компания предлагает широкий спектр услуг, включая резку, доставку пластика по всей территории России.
+            Кроме того, мы готовы выполнить индивидуальные заказы по техническому заданию клиента с учетом особых условий.
+            Мы гордимся высоким уровнем квалификации наших специалистов и демократичными ценами на наши услуги. Наша главная цель - индивидуальный подход к каждому клиенту, будь то оптовый или розничный заказчик.
+            Для крупных оптовых клиентов мы предлагаем специальные условия сотрудничества.
+            Все необходимые материалы всегда есть на нашем складе, а срок выполнения индивидуальных заказов составляет всего 2-4 недели с момента предоплаты.
+            Мы приглашаем вас к плодотворному и долгосрочному сотрудничеству!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- End О компании -->
+
+  <!-- Товары и услуги -->
+  <div class="catalog-wrapper">
+    <div class="container my-5">
+      <h2>Товары и услуги</h2>
+      <div class="row row-cols-1 row-cols-md-4 g-4 mt-4">
+        <?php
+        require($_SERVER['DOCUMENT_ROOT'] . '/database/db.php');
+
+        $sql = 'SELECT * FROM categories';
+        $result = $conn->query($sql);
+
+        if ($result->num_rows != 0) {
+
+          $categories = $result->fetch_all(MYSQLI_ASSOC);
+
+          foreach ($categories as $category): ?>
+            <div class="col">
+              <a href="/catalog/<?= $category['category_link']; ?>" class="card h-100 ki-card">
+                <div style="padding:10px;">
+                  <img style="width: 100%; height: 300px;" src=<?= '/assets/images/categories/' . $category['image'] ?> class="card-img-top" alt=<?= $$category['name'] ?>>
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title"><?= $category['name'] ?></h5>
+                </div>
+              </a>
+            </div>
+          <?php endforeach; ?>
+      </div>
+    </div>
+  <?php } ?>
+  </div>
+  <!-- End товары и услуги -->
+
+  <!-- Slider -->
+  <!-- <div class="container my-5" style="flex:1;">
+    <hr class="ki-custom-hr mb-5">
+    <div class="row mx-auto my-auto justify-content-center">
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-indicators">
+          <? foreach ($slider_data as $key => $item) { ?>
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="<?= $key ?>" aria-label="Слайд <?= $key ?>" class="<? if ($key == 0) echo 'active' ?>" aria-current="<?= $key == 0 ?>"></button>
+          <? } ?>
+        </div>
+        <div class="carousel-inner" role="listbox">
+ 
+          <? foreach ($slider_data as $key => $item) {
+          ?>
+            <div class="carousel-item <? if ($key == 0) echo 'active' ?>">
+              <div class="col-md-3">
+                <div class="card">
+                  <div class="card-img">
+                    <img src="/assets/images/slider/<?= $item['name'] ?>" class="img-fluid" alt="<?= $item['name'] ?>" style="width: 100%">
+                  </div>
+                </div>
+              </div>
+            </div>
+          <? } ?>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Предыдущий</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Следующий</span>
+        </button>
+      </div>
+    </div>
+  </div> -->
+  <!-- End Slider -->
+
   <!-- Преимущества -->
 
   <div class="container my-5">
-    <h2 class="text-center my-5 fs-1">Почему клиенты <span style="color: #e40024;">выбирают</span> именно <span style="color: #e40024;">Нас</span>?</h2>
+    <h2 class="text-center mb-5 fs-1">Почему клиенты <span style="color: #e40024;">выбирают</span> именно <span style="color: #e40024;">Нас</span>?</h2>
 
     <div class="row justify-content-around align-items-start">
       <div class="col-5 d-flex gap-1 ki-advantages-card">
@@ -81,101 +178,7 @@
   </div>
   <!-- End Преимущества -->
 
-  <!-- О компании -->
-  <section class="about" >
-    <div class="container">
-      <!-- <hr class="ki-custom-hr"> -->
-      <div class='about-wrapper d-flex gap-5 my-5 align-items-center'>
-        <div class="about-image-wrapper">
-          <img class="about-image" src="/assets/images/about_test.jpg" alt="Наша команда" >
-        </div>
-        <div class="about-text-wrapper">
-          <h3>О нас</h3>
-          <p style="text-align: justify; line-height: 1.8;">ООО "СВП" - надежный партнер в области производства и продажи листового пластика.
-            Мы работаем на рынке уже более 5 лет и за это время зарекомендовали себя как профессионалы своего дела.
-            Наша компания предлагает широкий спектр услуг, включая резку, доставку пластика по всей территории России.
-            Кроме того, мы готовы выполнить индивидуальные заказы по техническому заданию клиента с учетом особых условий.
-            Мы гордимся высоким уровнем квалификации наших специалистов и демократичными ценами на наши услуги. Наша главная цель - индивидуальный подход к каждому клиенту, будь то оптовый или розничный заказчик.
-            Для крупных оптовых клиентов мы предлагаем специальные условия сотрудничества.
-            Все необходимые материалы всегда есть на нашем складе, а срок выполнения индивидуальных заказов составляет всего 2-4 недели с момента предоплаты.
-            Мы приглашаем вас к плодотворному и долгосрочному сотрудничеству!</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- End О компании -->
-
-  <!-- Товары и услуги -->
-  <div class="container my-5">
-    <h2>Товары и услуги</h2>
-    <div class="row row-cols-1 row-cols-md-4 g-4 mt-4">
-      <?php
-      require($_SERVER['DOCUMENT_ROOT'] . '/database/db.php');
-
-      $sql = 'SELECT * FROM categories';
-      $result = $conn->query($sql);
-
-      if ($result->num_rows != 0) {
-
-        $categories = $result->fetch_all(MYSQLI_ASSOC);
-
-        foreach ($categories as $category): ?>
-          <div class="col">
-            <a href="/catalog/<?= $category['category_link']; ?>" class="card h-100 ki-card">
-              <div style="padding:10px;">
-                <img style="width: 100%; height: 300px;" src=<?= '/assets/images/categories/' . $category['image'] ?> class="card-img-top" alt=<?= $$category['name'] ?>>
-              </div>
-              <div class="card-body text-center">
-                <h5 class="card-title"><?= $category['name'] ?></h5>
-              </div>
-            </a>
-          </div>
-        <?php endforeach; ?>
-    </div>
-  </div>
-  <?php } ?>
-  <!-- End товары и услуги -->
-
-  <!-- Slider -->
-  <!-- <div class="container my-5" style="flex:1;">
-    <hr class="ki-custom-hr mb-5">
-    <div class="row mx-auto my-auto justify-content-center">
-      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-        <div class="carousel-indicators">
-          <? foreach ($slider_data as $key => $item) { ?>
-            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="<?= $key ?>" aria-label="Слайд <?= $key ?>" class="<? if ($key == 0) echo 'active' ?>" aria-current="<?= $key == 0 ?>"></button>
-          <? } ?>
-        </div>
-        <div class="carousel-inner" role="listbox">
- 
-          <? foreach ($slider_data as $key => $item) {
-          ?>
-            <div class="carousel-item <? if ($key == 0) echo 'active' ?>">
-              <div class="col-md-3">
-                <div class="card">
-                  <div class="card-img">
-                    <img src="/assets/images/slider/<?= $item['name'] ?>" class="img-fluid" alt="<?= $item['name'] ?>" style="width: 100%">
-                  </div>
-                </div>
-              </div>
-            </div>
-          <? } ?>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Предыдущий</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Следующий</span>
-        </button>
-      </div>
-    </div>
-  </div> -->
-  <!-- End Slider -->
-
-  <script>
+  <!-- <script>
     let items = document.querySelectorAll('.carousel .carousel-item')
 
     items.forEach((el) => {
@@ -191,5 +194,5 @@
         next = next.nextElementSibling
       }
     })
-  </script>
+  </script> -->
   <? include_once $_SERVER['DOCUMENT_ROOT'] . "/modules/footer.php"; ?>

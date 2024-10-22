@@ -11,11 +11,13 @@
       <div class="col mb-3"></div>
       <div class="col mb-3"></div>
       <div class="col mb-3">
-        <h5>Контакты</h5>
+        <a href="/contacts" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none text-light">
+          <h5>Контакты</h5>
+        </a>
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">г. Лыткарино, квартал 2-й, 15</a></li>
           <li class="nav-item mb-2"><a href="tel:+79017959902" class="nav-link p-0 text-light">+7 (901) 795-99-02</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">zva@sv-polymers.ru</a></li>
+          <li class="nav-item mb-2"><a href="/contacts/" class="nav-link p-0 text-light">zva@sv-polymers.ru</a></li>
           <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-light">Время работы:
               пн-пт 9.00-18.00, без перерыва
               сб, вс Выходной</a></li>

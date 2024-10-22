@@ -5,21 +5,24 @@ $keywords = 'ПВХ сэндвич-панели, оргстекло литое, 
 $page = 'catalog';
 
 include_once $_SERVER['DOCUMENT_ROOT'] . "/modules/header.php";
-$catalog_json_data = file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/catalog/catalog.json");
-$catalog_data = json_decode($catalog_json_data, true);
+
+require($_SERVER['DOCUMENT_ROOT'] . '/database/db.php');
+
+$sql = 'SELECT * FROM categories ORDER BY `id` DESC';
+$result = $conn->query($sql);
 ?>
 
 <div class="container my-5">
   <div class="container mt-5 mb-5">
     <div class="row row-cols-1 row-cols-md-4 g-4">
-      <?php foreach ($catalog_data as $product): ?>
+      <?php foreach ($result as $category): ?>
         <div class="col">
-          <a href="/catalog/<?= $product['href']; ?>" class="card h-100 ki-card">
+          <a href="/catalog/<?= $category['category_link']; ?>" class="card h-100 ki-card">
             <div style="padding:10px;">
-              <img style="width: 100%; height: 300px;" src=<?= '/assets/images/catalog/' . $product['mainImg'] ?> class="card-img-top" alt=<?= $product['name'] ?>>
+              <img style="width: 100%; height: 300px;" src=<?= '/assets/images/categories/' . $category['image'] ?> class="card-img-top" alt=<?= $$category['name'] ?>>
             </div>
             <div class="card-body text-center">
-              <h5 class="card-title"><?= $product['name'] ?></h5>
+              <h5 class="card-title"><?= $category['name'] ?></h5>
             </div>
           </a>
         </div>

@@ -44,7 +44,7 @@ if ($result->num_rows != 0) {
                 <? } ?>
                 Формат: <?= $product['length'] . 'x' . $product['width'] ?><br>
                 Производитель: <?= $product['manufacturer'] ?><br>
-              <p class="card-text" style="flex: 1;"><small class="text-body-secondary"><?= $product['description'] ?></small></p>
+              <!-- <p class="card-text" style="flex: 1;"><small class="text-body-secondary"><?= $product['description'] ?></small></p> -->
               <div class="card-footer bg-transparent d-flex justify-content-between px-0">
                 <p><span class="badge rounded-pill bg-primary"><?= $product['price']; ?> ₽/лист</span></p>
                 <p>Опт: <span class="badge rounded-pill bg-secondary"><?= $product['opt_price']; ?> ₽/лист</span></p>

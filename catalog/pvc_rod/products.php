@@ -41,10 +41,11 @@ if ($result->num_rows != 0) {
                 <? } ?>
                 Цвет: <?= $product['color'] ?><br>
                 Упаковка: <?= $product['pack'] ?><br>
-              <p class="card-text" style="flex: 1;"><small class="text-body-secondary"><?= $product['description'] ?></small></p>
-              <div class="card-footer bg-transparent d-flex justify-content-between px-0">
-                <p><span class="badge rounded-pill bg-primary"><?= $product['price']; ?> руб/бухта</span></p>
-                <p>Опт: <span class="badge rounded-pill bg-secondary"><?= $product['opt_price']; ?> руб/бухта</span></p>
+              <!-- <p class="card-text" style="flex: 1;"><small class="text-body-secondary"><?= $product['description'] ?></small></p> -->
+              <div class="card-footer bg-transparent d-flex justify-content-center px-0">
+                <p>Цена от: <strong class="text-danger"><?= $product['price']; ?> руб/бухта</strong></p>
+                <!-- <p><span class="badge rounded-pill bg-primary"><?= $product['price']; ?> руб/бухта</span></p>
+                <p>Опт: <span class="badge rounded-pill bg-secondary"><?= $product['opt_price']; ?> руб/бухта</span></p> -->
               </div>
             </div>
           </a>
