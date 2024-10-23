@@ -8,7 +8,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/modules/header.php";
 
 require($_SERVER['DOCUMENT_ROOT'] . '/database/db.php');
 
-$sql = 'SELECT * FROM categories ORDER BY `id` DESC';
+$sql = 'SELECT * FROM categories ORDER BY `category_order` ASC';
 $result = $conn->query($sql);
 ?>
 

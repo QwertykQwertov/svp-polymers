@@ -39,8 +39,29 @@ if ($result->num_rows != 0) {
             <h3><?= $product['name'] . ', ' . $product['pack'] ?></h3>
           </div>
           <div class="card-body">
-            <h4 class="card-title"><?= $product['price'] . ' ₽/бухта' ?></h4>
-            <p class="card-text"><?= 'Оптовая цена: ' . $product['price'] . ' ₽/бухта' ?></p>
+            <table class="table table-striped table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">Розница</th>
+                  <th scope="col">Опт*</th>
+                  <th scope="col">Дилер**</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><?= number_format($product['price'], 0, '.', ' ') . ' ₽/бухта' ?></td>
+                  <td><?= number_format($product['opt_price'], 0, '.', ' ') . ' ₽/бухта' ?></td>
+                  <td><?= number_format($product['diler_price'], 0, '.', ' ') . ' ₽/бухта' ?></td>
+                </tr>
+                <!-- <tr>
+                      <td>От 1 листа</td>
+                      <td>От 20 листов</td>
+                      <td>От 100 листов</td>
+                    </tr> -->
+              </tbody>
+            </table>
+            <p><em><strong>*</strong> Оптовая цена действует от 20 единиц</em></p>
+            <p><em><strong>**</strong> Дилерская цена действует от 100 единиц</em></p>
             <p class="card-text"><?= $product['description'] ?></p>
 
             <h4>Характеристики</h4>

@@ -38,7 +38,7 @@ if (!isset($page)) {
 
             <!--  -->
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdown1" data-flip="false"
+              <a class="nav-link dropdown-toggle <? if ($page === 'catalog') echo 'active' ?>" href="#" id="dropdown1" data-flip="false"
                 data-toggle="dropdown" aria-expanded="false">Каталог</a>
               <ul class="dropdown-menu" aria-labelledby="dropdown1">
                 <li class="dropdown">
@@ -111,7 +111,7 @@ if (!isset($page)) {
               <a class="nav-link <? if ($page === 'certificates') echo 'active' ?>" aria-current="page" href="/certificates/">Сертификаты</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link <? if ($page === 'delivery') echo 'active' ?>" aria-current="page" href="/delivery/">Услуги</a>
+              <a class="nav-link <? if ($page === 'services') echo 'active' ?>" aria-current="page" href="/services/">Услуги</a>
             </li>
             <li class="nav-item">
               <a class="nav-link <? if ($page === 'contacts') echo 'active' ?>" aria-current="page" href="/contacts/">Контакты</a>

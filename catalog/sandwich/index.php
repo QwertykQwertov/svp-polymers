@@ -8,7 +8,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/modules/header.php";
 
 require($_SERVER['DOCUMENT_ROOT'] . '/database/db.php');
 
-$sql = "SELECT * FROM products_sandwich";
+$sql = "SELECT * FROM products_sandwich ORDER BY name";
 $result = $conn->query($sql);
 
 if ($result->num_rows != 0) {
@@ -28,16 +28,15 @@ if ($result->num_rows != 0) {
             </div>
             <div class="card-body d-flex flex-column ">
               <h5 class="card-title"><?= $product['name'] ?></h5>
-              <p class="card-text">
+              <p class="card-text" style="flex:1;">
                 Покрытие: <?= $product['surface_1'] ?><br>
                 Поверхность: <?= $product['surface_2'] ?><br>
                 Упаковка: <?= $product['pack'] ?><br>
                 Толщина, мм: <?= $product['thickness'] ?><br>
                 Формат, мм: <?= $product['length'] . 'x' . $product['width'] ?><br>
-              <!-- <p class="card-text" style="flex: 1;"><small class="text-body-secondary"><?= $product['description'] ?></small></p> -->
-              <div class="card-footer bg-transparent d-flex justify-content-between px-0">
-                <p><span class="badge rounded-pill bg-primary"><?= $product['price']; ?> ₽/лист</span></p>
-                <p>Опт: <span class="badge rounded-pill bg-secondary"><?= $product['opt_price']; ?> ₽/лист</span></p>
+                <!-- <p class="card-text" style="flex: 1;"><small class="text-body-secondary"><?= $product['description'] ?></small></p> -->
+              <div class="card-footer bg-transparent d-flex justify-content-center px-0">
+                <p>Цена от: <strong class="text-danger"><?= $product['opt_price']; ?> ₽/лист</strong></p>
               </div>
             </div>
           </a>

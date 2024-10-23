@@ -11,9 +11,45 @@
   $catalog_json_data = file_get_contents($_SERVER['DOCUMENT_ROOT'] . "/catalog/catalog.json");
   $catalog_data = json_decode($catalog_json_data, true);
   ?>
-  <div class="welcome-section">
-    <div class="welcome-overlay"></div>
+
+  <div style="flex:1;">
+    <div class="row m-0">
+      <div id="carouselExampleAutoplaying" class="carousel slide p-0" data-bs-ride="carousel" data-bs-interval="3000">
+        <div class="carousel-indicators">
+          <? foreach ($slider_data as $key => $item) { ?>
+            <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="<?= $key ?>" aria-label="Слайд <?= $key ?>" class="<? if ($key == 0) echo 'active' ?>" aria-current="<?= $key == 0 ?>"></button>
+          <? } ?>
+        </div>
+        <div class="carousel-inner" role="listbox">
+
+          <? foreach ($slider_data as $key => $item) {
+          ?>
+            <div class="carousel-item <? if ($key == 0) echo 'active' ?>">
+              <!-- <div class="col-md-3"> -->
+              <div class="card" style="border: none;">
+                <div class="card-img">
+                  <img src="/assets/images/slider/<?= $item['name'] ?>" class="img-fluid" alt="<?= $item['name'] ?>" style="width: 100%; max-height: 70vh;">
+                </div>
+              </div>
+              <!-- </div> -->
+            </div>
+          <? } ?>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Предыдущий</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Следующий</span>
+        </button>
+      </div>
+    </div>
   </div>
+
+  <!-- <div class="welcome-section">
+    <div class="welcome-overlay"></div>
+  </div> -->
 
 
   <!-- О компании -->
@@ -49,7 +85,7 @@
         <?php
         require($_SERVER['DOCUMENT_ROOT'] . '/database/db.php');
 
-        $sql = 'SELECT * FROM categories';
+        $sql = 'SELECT * FROM categories ORDER BY `category_order` ASC';
         $result = $conn->query($sql);
 
         if ($result->num_rows != 0) {
