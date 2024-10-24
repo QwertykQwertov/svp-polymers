@@ -11,7 +11,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/database/db.php');
 $id = $_GET['id'];
 
 if ($id) {
-  $sql = "SELECT * FROM products_pvc_plastic WHERE id = $id";
+  $sql = "SELECT * FROM products_polypropylene WHERE id = $id";
 } else {
   // 404
 }
@@ -51,21 +51,9 @@ if ($result->num_rows != 0) {
                   <td><?= number_format($product['opt_price'], 0, '.', ' ') . ' ₽/лист' ?></td>
                   <td><?= number_format($product['diler_price'], 0, '.', ' ') . ' ₽/лист' ?></td>
                 </tr>
-                <!-- <tr>
-                      <td>От 1 листа</td>
-                      <td>От 20 листов</td>
-                      <td>От 100 листов</td>
-                    </tr> -->
               </tbody>
             </table>
-            <!-- <h4 class="card-title">
-              <span class="badge rounded-pill bg-primary">
-                <?= number_format($product['price'], 0, '.', ' ') . ' ₽/лист' ?>
-              </span>
             </h4>
-            <span class="badge rounded-pill bg-secondary">
-              <?= 'Оптовая цена: ' . number_format($product['opt_price'], 0, '.', ' ') . ' ₽/лист' ?>
-            </span> -->
           </div>
           <p><em><strong>*</strong> Оптовая цена действует от 20 листов</em></p>
           <p><em><strong>**</strong> Дилерская цена действует от 100 листов</em></p>
@@ -76,7 +64,7 @@ if ($result->num_rows != 0) {
           <h4>Характеристики</h4>
           <p class="card-text"><?= 'Формат, мм: ' . $product['length'] . 'x' . $product['width'] ?></p>
           <p class="card-text"><?= 'Толщина, мм: ' . $product['thickness'] ?></p>
-          <p class="card-text"><?= 'Поверхность: ' . $product['surface'] ?></p>
+          <p class="card-text"><?= 'Плотность: ' . $product['density'] ?></p>
           <p class="card-text"><?= 'Цвет: ' . $product['color'] ?></p>
           <p class="card-text"><?= 'Упаковка: ' . $product['pack'] ?></p>
         </div>
@@ -85,7 +73,7 @@ if ($result->num_rows != 0) {
   </div>
 </div>
 
-<div class="card my-3">
+<!-- <div class="card my-3">
   <div class="row g-0">
     <div class="card-body">
       <h5>Описание:</h5>
@@ -136,8 +124,8 @@ if ($result->num_rows != 0) {
       </ul>
     </div>
   </div>
-</div>
+</div> -->
 
-</div>
+<!-- </div> -->
 
 <? include_once $_SERVER['DOCUMENT_ROOT'] . "/modules/footer.php"; ?>
