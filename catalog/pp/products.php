@@ -41,7 +41,7 @@ if ($result->num_rows != 0) {
                 Плотность: <?= $product['density'] ?><br>
                 Цвет: <?= $product['color'] ?><br>
               <div class="card-footer bg-transparent d-flex justify-content-center px-0">
-                <p>Цена от: <strong class="text-danger"><?= $product['opt_price']; ?> ₽/лист</strong></p>
+                <p>Цена от: <strong class="text-danger"><?= number_format($product['opt_price'], 0, '.', ' '); ?> ₽/лист</strong></p>
               </div>
             </div>
           </a>
