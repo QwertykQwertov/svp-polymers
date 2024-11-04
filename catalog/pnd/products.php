@@ -8,7 +8,14 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/modules/header.php";
 
 require($_SERVER['DOCUMENT_ROOT'] . '/database/db.php');
 
-$sql = "SELECT * FROM products_abs ORDER BY name";
+$subcategory = $_GET['sub'];
+
+if ($subcategory) {
+  $sql = "SELECT * FROM products_pnd WHERE subcategory = $subcategory";
+} else {
+  $sql = "SELECT * FROM products WHERE category = 5";
+}
+
 $result = $conn->query($sql);
 
 if ($result->num_rows != 0) {
@@ -22,7 +29,7 @@ if ($result->num_rows != 0) {
     <div class="row row-cols-1 row-cols-md-4 g-4 justify-content-center">
       <?php foreach ($products as $product): ?>
         <div class="col">
-          <a href="/catalog/abs/product?id=<?= $product['id']; ?>" class="card h-100 ki-card">
+          <a href="/catalog/pp/product?id=<?= $product['id']; ?>" class="card h-100 ki-card">
             <div style="padding:10px;">
               <img style="width: 100%; height: 300px;" src=<?= '/assets/images/catalog/' . $product['image'] ?> class="card-img-top" alt=<?= $product['name'] ?>>
             </div>

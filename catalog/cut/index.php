@@ -8,8 +8,8 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/modules/header.php";
 <div class="container my-5">
   <h2 class="text-center">Резка пластика</h2>
   <p class="h5 mt-5"> Предоставляем услуги резки материала на форматно-раскроечном станке по заданным размерам, погрещность составляет 3-4мм,
-    спил 2мм. Стоимость 1 погонного метра составляет 80₽.
-    Также произовдим резку на станке ЧПУ по индивидуальным чертежам клиента. Цена 1 погонного метра составляет 150₽</p>
+    спил 2мм. Стоимость 1 погонного метра составляет 80₽.<br>
+    Также произовдим резку на станке ЧПУ по индивидуальным чертежам клиента. Цена 1 погонного метра составляет 150₽.</p>
   <div class="container mt-5 mb-5 d-flex flex-column g-3" style="gap: 1rem">
     <div class="row g-3">
       <div class="col-7">
@@ -39,5 +39,4 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/modules/header.php";
     </div>
   </div>
 </div>
-
 <? include_once $_SERVER['DOCUMENT_ROOT'] . "/modules/footer.php"; ?>

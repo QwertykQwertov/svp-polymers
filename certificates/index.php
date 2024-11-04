@@ -22,6 +22,7 @@ $dir = $_SERVER['DOCUMENT_ROOT'] . '/assets/certificates'; // убедитесь
       <div class="col">
         <a href="<?= '/assets/certificates/' . $fileName; ?>" class="card h-100 ki-card" target="_blank">
           <div style="padding:10px; position: relative;">
+            <img data-pdf-thumbnail-file=<?= '/assets/certificates/' . $fileName ?> data-pdf-thumbnail-width="200">
             <img src=<?= '/assets/certificates/' . $fileName ?> class="card-img-top" alt="Сертификат">
           </div>
           <div class="card-body text-center">
@@ -32,6 +33,5 @@ $dir = $_SERVER['DOCUMENT_ROOT'] . '/assets/certificates'; // убедитесь
     <?php endforeach; ?>
   </div>
 </div>
-
 
 <? include_once $_SERVER['DOCUMENT_ROOT'] . "/modules/footer.php"; ?>
