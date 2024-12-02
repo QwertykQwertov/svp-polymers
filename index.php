@@ -28,7 +28,7 @@
               <!-- <div class="col-md-3"> -->
               <div class="card" style="border: none;">
                 <div class="card-img">
-                  <img src="/assets/images/slider/<?= $item['name'] ?>" class="img-fluid" alt="<?= $item['name'] ?>" style="width: 100%; max-height: 70vh;">
+                  <img src="/assets/images/slider/<?= $item['name'] ?>" class="img-fluid" alt="<?= $item['name'] ?>" style="width: 100%; max-height: 80vh;">
                 </div>
               </div>
               <!-- </div> -->

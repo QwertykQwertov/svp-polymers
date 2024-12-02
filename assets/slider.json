@@ -1,19 +1,8 @@
 [
-  {"name": "tecno.jpg"},
-  {"name": "tecno2.jpg"},
-  {"name": "org_ex_1.jpg"},
-  {"name": "org_ex_2.jpg"},
-  {"name": "org_litoe_1.jpg"},
-  {"name": "org_litoe_2.jpg"},
-  {"name": "poly_litoy_1.jpg"},
-  {"name": "poly_litoy_2.jpg"},
-  {"name": "pvc_foam_1.jpg"},
-  {"name": "pvc_foam_2.jpg"},
-  {"name": "pvc_prozr_1.jpg"},
-  {"name": "pvc_prozr_2.jpg"},
-  {"name": "sandwich_1.jpg"},
-  {"name": "sandwich_2.jpg"},
-  {"name": "sotov_1.jpg"},
-  {"name": "sotov_2.jpg"},
-  {"name": "zhest_pvc.jpg"}
+  {
+    "name": "slider1.jpg"
+  },
+  {
+    "name": "slider2.jpg"
+  }
 ]
