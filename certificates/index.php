@@ -5,28 +5,31 @@ $keywords = 'ПВХ сэндвич-панели, оргстекло литое, 
 $page = 'certificates';
 include_once $_SERVER['DOCUMENT_ROOT'] . "/modules/header.php";
 
-$dir = $_SERVER['DOCUMENT_ROOT'] . '/assets/certificates'; // убедитесь, что директория указана правильно
+require($_SERVER['DOCUMENT_ROOT'] . '/database/db.php');
 
-// foreach (glob($dir . '/*') as $fileName) { 
-//   echo $url . '/' . basename($fileName) ;
-//   echo "\n";
-// }
-// return
+$sql = "SELECT * FROM certificates";
+
+$result = $conn->query($sql);
+
+if ($result->num_rows != 0) {
+  $certificates = $result->fetch_all(MYSQLI_ASSOC);
+} else {
+  $certificates = [];
+}
 ?>
 
 
 
 <div class="container mt-5 mb-5">
   <div class="row row-cols-1 row-cols-md-4 g-4">
-    <?php foreach (array_diff(scandir($dir), array('..', '.')) as $fileName): ?>
+    <?php foreach ($certificates as $certificate): ?>
       <div class="col">
-        <a href="<?= '/assets/certificates/' . $fileName; ?>" class="card h-100 ki-card" target="_blank">
+        <a href="<?= '/assets/certificates/' . $certificate['file']; ?>" class="card h-100 ki-card" target="_blank">
           <div style="padding:10px; position: relative;">
-            <img data-pdf-thumbnail-file=<?= '/assets/certificates/' . $fileName ?> data-pdf-thumbnail-width="200">
-            <img src=<?= '/assets/certificates/' . $fileName ?> class="card-img-top" alt="Сертификат">
+            <img src=<?= '/assets/certificates/images/' . $certificate['preview']; ?> class="card-img-top" alt="<?= $certificate['name'] ?>">
           </div>
           <div class="card-body text-center">
-            <h5 class="card-title"><?= $fileName ?></h5>
+            <h5 class="card-title"><?= $certificate['name'] ?></h5>
           </div>
         </a>
       </div>
