@@ -5,7 +5,7 @@
         <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none text-light">
           <h5>ООО "СВП"</h5>
         </a>
-        <p class="text-light">© 2024</p>
+        <p class="text-light">© 2025</p>
       </div>
 
       <div class="col mb-3"></div>
