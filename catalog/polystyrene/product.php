@@ -28,8 +28,10 @@ if ($result->num_rows != 0) {
 
   <div class="card my-5">
     <div class="row g-0">
-      <div class="" style="max-width: 30%; border-right: 1px solid var(--bs-border-color-translucent);">
-        <img src="<?= '/assets/images/catalog/' . $product['image'] ?>" class="img-fluid rounded-start" style="width: 100%; height: 100%" alt="<?= $product['name'] ?>">
+    <div class="" style="max-width: 30%; border-right: 1px solid var(--bs-border-color-translucent);" onclick="onImageClick(event)">
+        <button class="ki-modal-trigger product-image-wrapper d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#modalCenter">
+          <img src="<?= '/assets/images/catalog/' . $product['image'] ?>" data-images="<?= $product['other_images'] ?>" class="img-fluid rounded-start" style="width: 100%; height: 100%" alt="<?= $product['name'] ?>">
+        </button>
       </div>
       <div class="" style="flex: 1;">
         <div class="card-header">

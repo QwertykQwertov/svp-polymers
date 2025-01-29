@@ -30,7 +30,7 @@ if ($result->num_rows != 0) {
     <div class="row g-0">
       <div class="" style="max-width: 30%; border-right: 1px solid var(--bs-border-color-translucent);" onclick="onImageClick(event)">
         <button class="ki-modal-trigger product-image-wrapper d-flex justify-content-center align-items-center" data-toggle="modal" data-target="#modalCenter">
-          <img src="<?= '/assets/images/catalog/' . $product['image'] ?>" class="img-fluid rounded-start" style="width: 100%; height: 100%" alt="<?= $product['name'] ?>">
+          <img src="<?= '/assets/images/catalog/' . $product['image'] ?>" data-images="<?= $product['other_images'] ?>" class="img-fluid rounded-start" style="width: 100%; height: 100%" alt="<?= $product['name'] ?>">
         </button>
       </div>
       <div class="" style="flex: 1;">
@@ -53,27 +53,13 @@ if ($result->num_rows != 0) {
                   <td><?= number_format($product['opt_price'], 0, '.', ' ') . ' ₽/лист' ?></td>
                   <td><?= number_format($product['diler_price'], 0, '.', ' ') . ' ₽/лист' ?></td>
                 </tr>
-                <!-- <tr>
-                      <td>От 1 листа</td>
-                      <td>От 20 листов</td>
-                      <td>От 100 листов</td>
-                    </tr> -->
               </tbody>
             </table>
-            <!-- <h4 class="card-title">
-              <span class="badge rounded-pill bg-primary">
-                <?= number_format($product['price'], 0, '.', ' ') . ' ₽/лист' ?>
-              </span>
-            </h4>
-            <span class="badge rounded-pill bg-secondary">
-              <?= 'Оптовая цена: ' . number_format($product['opt_price'], 0, '.', ' ') . ' ₽/лист' ?>
-            </span> -->
           </div>
           <p><em><strong>*</strong> Оптовая цена действует от 20 листов</em></p>
           <p><em><strong>**</strong> Дилерская цена действует от 100 листов</em></p>
 
           <p class="card-text"><?= $product['description'] ?></p>
-
 
           <h4>Характеристики</h4>
           <p class="card-text"><?= 'Формат, мм: ' . $product['length'] . 'x' . $product['width'] ?></p>
