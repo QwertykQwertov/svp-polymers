@@ -81,7 +81,7 @@
   <div class="catalog-wrapper">
     <div class="container my-5">
       <h2>Товары и услуги</h2>
-      <div class="row row-cols-1 row-cols-md-4 g-4 mt-4">
+      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4 mt-4">
         <?php
         require($_SERVER['DOCUMENT_ROOT'] . '/database/db.php');
 

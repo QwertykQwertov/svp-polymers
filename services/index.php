@@ -11,7 +11,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/modules/header.php";
 
   <div class="card my-5">
     <div class="row g-0">
-      <div class="" style="max-width: 30%; border-right: 1px solid var(--bs-border-color-translucent);">
+      <div class="ki-services-image-wrapper" style="max-width: 30%; border-right: 1px solid var(--bs-border-color-translucent);">
         <img src="/assets/images/formatno-raskroy.webp" class="img-fluid rounded-start" style="width: 100%; height: 100%" alt="Изображение станка">
       </div>
       <div class="" style="flex: 1;">
@@ -34,7 +34,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/modules/header.php";
 
   <div class="card my-5">
     <div class="row g-0">
-      <div class="" style="max-width: 30%; border-right: 1px solid var(--bs-border-color-translucent);">
+      <div class="ki-services-image-wrapper" style="max-width: 30%; border-right: 1px solid var(--bs-border-color-translucent);">
         <img src="/assets/images/rezka_cnc.webp" class="img-fluid rounded-start" style="width: 100%; height: 100%" alt="Изображение станка">
       </div>
       <div class="" style="flex: 1;">
@@ -55,7 +55,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/modules/header.php";
 
   <div class="card my-5">
     <div class="row g-0">
-      <div class="" style="max-width: 30%; border-right: 1px solid var(--bs-border-color-translucent);">
+      <div class="ki-services-image-wrapper" style="max-width: 30%; border-right: 1px solid var(--bs-border-color-translucent);">
         <img src="/assets/images/delivery_img.jpg" class="img-fluid rounded-start" style="width: 100%; height: 100%" alt="Изображение станка">
       </div>
       <div class="" style="flex: 1;">
