@@ -31,13 +31,8 @@ body {
   background-color: rgba(0, 0, 0, 0.11);
 }
 
-
-.ki-advantages-card {
-  /* justify-content: center; */
-}
-
 .ki-card {
-  translate: all .3s;
+  transition: all .3s;
   text-decoration: none;
 }
 
@@ -45,47 +40,6 @@ body {
   scale: 1.01;
   box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
-
-
-/* slider */
-/* @media (max-width: 767px) {
-  .carousel-inner .carousel-item>div {
-    display: none;
-  }
-
-  .carousel-inner .carousel-item>div:first-child {
-    display: block;
-  }
-} */
-
-/* .carousel-inner .carousel-item.active,
-.carousel-inner .carousel-item-next,
-.carousel-inner .carousel-item-prev {
-  display: flex; */
-/* justify-content: center; */
-/* } */
-
-/* medium and up screens */
-/* @media (min-width: 768px) {
-
-  .carousel-inner .carousel-item-end.active,
-  .carousel-inner .carousel-item-next {
-    transform: translateX(25%);
-  }
-
-  .carousel-inner .carousel-item-start.active,
-  .carousel-inner .carousel-item-prev {
-    transform: translateX(-25%);
-  }
-}
-
-.carousel-inner .carousel-item-end,
-.carousel-inner .carousel-item-start {
-  transform: translateX(0);
-} */
-
-/* End slider */
-
 
 /* contacts page */
 .contacts-wrapper {
@@ -141,10 +95,6 @@ body {
 .dropdown-submenu:hover>.dropdown-menu,
 .dropdown-submenu:focus>.dropdown-menu {
   display: block;
-}
-
-.about {
-  /* background-color: #F5F5FB; */
 }
 
 .catalog-wrapper {
