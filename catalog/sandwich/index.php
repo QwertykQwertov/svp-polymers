@@ -8,16 +8,20 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/modules/header.php";
 
 require($_SERVER['DOCUMENT_ROOT'] . '/database/db.php');
 
-var_dump($_GET);
+$url_params = $_GET;
 
-if ($_GET['width'] || $GET['length'] || $GET['thickness']) {
+if ($url_params['thickness']) {
   $sql = "SELECT * FROM products_sandwich WHERE ";
   foreach ($_GET as $parameter => $value):
-    // echo ($parameter);
     $sql = $sql . $parameter . ' = ' . $value . ' AND ';
+
   endforeach;
+
+  echo ($sql);
+  $sql = trim($sql, ' AND ');
   echo ($sql);
 } else {
+  echo ('else');
   $sql = "SELECT * FROM products_sandwich ORDER BY name";
 }
 
@@ -35,29 +39,31 @@ if ($result->num_rows != 0) {
     <div class="col">
       <label for="width">Ширина</label>
       <select id="width" class="form-control">
-        <option value="null" selected>Не выбрано</option>
-        <option value="3000">3000</option>
+        <option value="null" <?php if (!$_GET['width']) echo ('selected') ?>>Не выбрано</option>
+        <option value="3000" <?php if ($_GET['width'] == '3000') echo ('selected') ?>>3000</option>
       </select>
     </div>
     <div class="col">
       <label for="length1">Длина</label>
       <select id="length1" class="form-control">
-        <option value="null" selected>Не выбрано</option>
-        <option value="1500">1500</option>
-        <option value="2000">2000</option>
+        <option value="null" <?php if (!$_GET['length']) echo ('selected') ?>>Не выбрано</option>
+        <option value="1500" <?php if ($_GET['length'] == '1500') echo ('selected') ?>>1500</option>
+        <option value="2000" <?php if ($_GET['length'] == '2000') echo ('selected') ?>>2000</option>
       </select>
     </div>
     <div class="col">
       <label for="thickness">Толщина</label>
       <select id="thickness" class="form-control">
-        <option value="null" selected>Не выбрано</option>
-        <option value="10">10 мм</option>
-        <option value="24">24 мм</option>
-        <option value="32">32 мм</option>
-        <option value="36">36 мм</option>
-        <option value="40">40 мм</option>
-        <option value="44">44 мм</option>
-        <option value="46">46 мм</option>
+        <option value="null" <?php if (!$_GET['thickness']) echo ('selected') ?>>Не выбрано</option>
+        <option value="10" <?php if ($_GET['thickness'] == '10') echo ('selected') ?>>10 мм</option>
+        <option value="24" <?php if ($_GET['thickness'] == '24') echo ('selected') ?>>24 мм</option>
+        <option value="24.2" <?php if ($_GET['thickness'] == '24.2') echo ('selected') ?>>24.2 мм</option>
+        <option value="32" <?php if ($_GET['thickness'] == '32') echo ('selected') ?>>32 мм</option>
+        <option value="36" <?php if ($_GET['thickness'] == '36') echo ('selected') ?>>36 мм</option>
+        <option value="40" <?php if ($_GET['thickness'] == '40') echo ('selected') ?>>40 мм</option>
+        <option value="40.38" <?php if ($_GET['thickness'] == '40.38') echo ('selected') ?>>40.38 мм</option>
+        <option value="44" <?php if ($_GET['thickness'] == '44') echo ('selected') ?>>44 мм</option>
+        <option value="46" <?php if ($_GET['thickness'] == '46') echo ('selected') ?>>46 мм</option>
       </select>
     </div>
     <div class="col d-flex align-items-end">
