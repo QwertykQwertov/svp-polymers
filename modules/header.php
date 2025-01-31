@@ -44,10 +44,10 @@ if (!isset($page)) {
                 <li class="dropdown">
                   <a class="dropdown-item dropdown-toggle" href="/catalog/pvc_plastic/">ПВХ</a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="/catalog/pvc_plastic/products?sub=3">Вспененный</a></li>
-                    <li><a class="dropdown-item" href="/catalog/pvc_plastic/products?sub=4">Жесткий</a></li>
-                    <li><a class="dropdown-item" href="/catalog/pvc_plastic/products?sub=5">Светоблокирующий</a></li>
-                    <li><a class="dropdown-item" href="/catalog/pvc_plastic/products?sub=6">Трудногорючий</a></li>
+                    <li><a class="dropdown-item" href="/catalog/pvc_plastic/products?subcategory=3">Вспененный</a></li>
+                    <li><a class="dropdown-item" href="/catalog/pvc_plastic/products?subcategory=4">Жесткий</a></li>
+                    <li><a class="dropdown-item" href="/catalog/pvc_plastic/products?subcategory=5">Светоблокирующий</a></li>
+                    <li><a class="dropdown-item" href="/catalog/pvc_plastic/products?subcategory=6">Трудногорючий</a></li>
                   </ul>
                 </li>
                 <li><a class="dropdown-item" href="/catalog/sandwich">Сэндвич</a></li>

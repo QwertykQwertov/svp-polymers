@@ -10,7 +10,7 @@ require($_SERVER['DOCUMENT_ROOT'] . '/database/db.php');
 
 $url_params = $_GET;
 
-if ($url_params['thickness']) {
+if ($url_params['length'] || $url_params['width'] || $url_params['thickness']) {
   $sql = "SELECT * FROM products_sandwich WHERE ";
 
   foreach ($_GET as $parameter => $value):
@@ -33,15 +33,15 @@ if ($result->num_rows != 0) {
 ?>
 
 <div class="container my-5">
-  <div class="row row-cols-1 row-cols-md-4 g-4">
-    <div class="col">
+  <div class="row row-cols-1 row-cols-md-4 g-4 ki-filter-panel">
+    <div class="col ki-filter-item">
       <label for="width">Ширина</label>
       <select id="width" class="form-control">
         <option value="null" <?php if (!$_GET['width']) echo ('selected') ?>>Не выбрано</option>
         <option value="3000" <?php if ($_GET['width'] == '3000') echo ('selected') ?>>3000</option>
       </select>
     </div>
-    <div class="col">
+    <div class="col ki-filter-item">
       <label for="length1">Длина</label>
       <select id="length1" class="form-control">
         <option value="null" <?php if (!$_GET['length']) echo ('selected') ?>>Не выбрано</option>
@@ -49,7 +49,7 @@ if ($result->num_rows != 0) {
         <option value="2000" <?php if ($_GET['length'] == '2000') echo ('selected') ?>>2000</option>
       </select>
     </div>
-    <div class="col">
+    <div class="col ki-filter-item">
       <label for="thickness">Толщина</label>
       <select id="thickness" class="form-control">
         <option value="null" <?php if (!$_GET['thickness']) echo ('selected') ?>>Не выбрано</option>
@@ -64,7 +64,7 @@ if ($result->num_rows != 0) {
         <option value="46" <?php if ($_GET['thickness'] == '46') echo ('selected') ?>>46 мм</option>
       </select>
     </div>
-    <div class="col d-flex align-items-end">
+    <div class="col d-flex align-items-end ki-filter-item">
       <button class="btn btn-dark" onclick="setFilter()">Применить</button>
     </div>
   </div>

@@ -8,7 +8,7 @@ include_once $_SERVER['DOCUMENT_ROOT'] . "/modules/header.php";
 
 require($_SERVER['DOCUMENT_ROOT'] . '/database/db.php');
 
-$subcategory = $_GET['sub'];
+$subcategory = $_GET['subcategory'];
 
 if ($subcategory) {
   $sql = "SELECT * FROM products_polystyrene WHERE subcategory = $subcategory";
