@@ -12,20 +12,18 @@ $url_params = $_GET;
 
 if ($url_params['thickness']) {
   $sql = "SELECT * FROM products_sandwich WHERE ";
+
   foreach ($_GET as $parameter => $value):
     $sql = $sql . $parameter . ' = ' . $value . ' AND ';
-
   endforeach;
 
-  echo ($sql);
   $sql = trim($sql, ' AND ');
-  echo ($sql);
+  $sql = $sql . ' ORDER BY name';
 } else {
   echo ('else');
   $sql = "SELECT * FROM products_sandwich ORDER BY name";
 }
 
-// $sql = "SELECT * FROM products_sandwich ORDER BY name";
 $result = $conn->query($sql);
 
 if ($result->num_rows != 0) {
